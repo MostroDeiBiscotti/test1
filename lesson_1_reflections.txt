@@ -1,0 +1,17 @@
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+pwd 						  # print working directory - shows what directory you are in
+ls  						  # list the files in this directory
+
+git log						# mostra log modifiche
+git diff <n0> <n1> 			# mostra differenze fra due file: prima il più vecchio, poi quello nuovo
+git log --stat 				# mostra statistiche delle modifiche, compreso il n. di file modificati
+git clone <urlRepo>			# clona repo
+git config --global color.ui auto # cambia colori modifiche
+git checkout <n0> 			# ritorna alla versione indicata
+
+git init					# inizializza repo
+git status 					# mostra file cambiati dall'ultimo commit
