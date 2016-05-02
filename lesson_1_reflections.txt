@@ -7,11 +7,33 @@ pwd 						  # print working directory - shows what directory you are in
 ls  						  # list the files in this directory
 
 git log						# mostra log modifiche
-git diff <n0> <n1> 			# mostra differenze fra due file: prima il più vecchio, poi quello nuovo
+git diff <nCommit0> <nCommit1> 			# mostra differenze fra due file: prima il più vecchio, poi quello nuovo
+git diff					# differenze fra working dir e staging area
+git diff --staged			# differenze fra staging e commit
 git log --stat 				# mostra statistiche delle modifiche, compreso il n. di file modificati
 git clone <urlRepo>			# clona repo
-git config --global color.ui auto # cambia colori modifiche
+git config --global color.ui auto	# cambia colori modifiche
 git checkout <n0> 			# ritorna alla versione indicata
 
 git init					# inizializza repo
 git status 					# mostra file cambiati dall'ultimo commit
+
+git add <nomeFile> 			# aggiunge file nella staging area
+git commit -m "Commit message"	# commit più messaggio
+
+Since you are learning Git, know that this has little to do with git but with the text editor configured for use. 
+In vim, you can press i to start entering text and save by pressing esc and :wq and enter, this will commit with the message you typed.
+In your current state, to just come out without committing, you can do :q instead of the :wq as mentioned above.
+Alternatively, you can just do git commit -m '<message>' instead of having git open the editor to type the message.
+
+git branch 					# mostra branch corrente
+git branch <nomeBranch>		# crea branch
+git checkout <nomeBranch>   # passa al branch
+
+git checkout master 		# torna a commit principale
+
+git log --graph --oneline <nomeBranch>	<nomeBranch> # mostra albero dei branch
+
+git merge master coins 		# unisce i branch
+git show <nCommit>			# mostra differenze fra commit e commit padre
+git branch -d <nomeBranch>	# cancella branch label
